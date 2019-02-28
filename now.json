@@ -1,6 +1,6 @@
 {
   "name": "dapp-mailer",
-  "alias": "dappmailer.giveth.io",
+  "alias": "dappmailer.b4h.world",
   "files": [
     "src",
     "config/production.json",

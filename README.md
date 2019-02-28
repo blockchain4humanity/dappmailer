@@ -1,6 +1,6 @@
 # dapp-mailer
 
-> The Giveth Dapp Mailer Notification System
+> The Dapp Mailer Notification System
 Sends transactional emails and handles unsubscribes for specific email types.
 
 ## About
@@ -47,7 +47,7 @@ The reason is that we use [Now](https://zeit.co/now) to deploy this project, whi
 If you don't use now, you can move these back to devDependencies.
 
 ## Deploy
-At Giveth we deploy with [Now](https://zeit.co/now). 
+Deploy with [Now](https://zeit.co/now), or use any server that supports Node
 
 To deploy:
 `cd path/to/dapp-mailer; yarn deploy`

@@ -4,6 +4,8 @@ class UnsubscribeMessage extends React.Component {
   render() {
     const { message } = this.props;
 
+    console.log(message)
+
     const bodyStyle = {
       color: "white",
       backgroundColor: "#49a79b"
@@ -21,7 +23,7 @@ class UnsubscribeMessage extends React.Component {
     return (
       <html>
         <head>
-          <title>Unsubscribe from Giveth notification emails</title>
+          <title>Unsubscribe from Blockchain for Humanity notification emails</title>
           <meta charset="utf-8"/>
           <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
 
@@ -30,8 +32,8 @@ class UnsubscribeMessage extends React.Component {
         <body style={bodyStyle}>
           <div className="container" style={containerStyle}>
             <center>
-              <img src="/giveth-typelogo.svg" width="150px" style={imageStyle}/>
-              <h2>{message}</h2>
+              <img src="/images/b4h-logo.svg" width="48px" style={imageStyle}/>
+              <h2 dangerouslySetInnerHTML={{__html: message}}></h2>
             </center>
           </div>
         </body>

@@ -15,6 +15,8 @@ export default function(app, req, res) {
         }); 
       } else {
 
+        if(!recipient || !type) throw new errors.NotFound('missing-email-or-type');
+
         // create a new unsubscribe for this email
         service.create({ 
           email: recipient,
@@ -26,9 +28,20 @@ export default function(app, req, res) {
 
         }).catch((e) => {
           res.render('UnsubscribeMessage', {  
-            message: "Oops, something went wrong :-( Please contact support at support@giveth.io"
+            message: "Oops, something went wrong :-( <br/>Please contact support at support@b4h.world"
           });           
         })
       }
     })
+   .catch(err => {
+      if(err.message === 'missing-email-or-type') {
+        res.render('UnsubscribeMessage', {  
+          message: "Email or email type not specified :-( <br/>Please contact support at support@b4h.world"
+        }); 
+      } else {
+        res.render('UnsubscribeMessage', {  
+          message: "Oops, something went wrong :-( <br/>Please contact support at support@b4h.world"
+        }); 
+      } 
+   })
 }

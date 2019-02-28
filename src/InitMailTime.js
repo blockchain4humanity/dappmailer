@@ -8,7 +8,7 @@ const createServer = (app, db) => {
 
   transports.push(nodemailer.createTransport({
     host: 'smtp.mailgun.org',
-    port: 587,
+    port: 2525,
     from: app.get('mailSender'),
     auth: {
       user: app.get('nodemailer').transportUser,
